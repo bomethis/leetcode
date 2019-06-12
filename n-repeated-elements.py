@@ -3,12 +3,13 @@ class Solution:
         unique_nums = len(set(A))
         N = unique_nums - 1
         sorted_list = sorted(A)
-        unique = 0
-        for i in range(unique_nums):
-            if sorted_list[unique] == sorted_list[unique + N - 1]:
-                return sorted_list[unique]
-            else:
-                unique += N
+
+        for i in range(len(N)):
+            count = 1
+            while sorted_list[i] == sorted_list[i+1]:
+                count += 1
+                if count == N:
+                    return sorted_list[i]
 
 
 A = [5,1,5,2,5,3,5,4]
