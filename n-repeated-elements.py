@@ -5,8 +5,8 @@ class Solution:
         sorted_list = sorted(A)
         unique = 0
         for i in range(unique_nums):
-            if sorted_list[unique] == sorted_list[unique + N]:
-                return sorted_list[i]
+            if sorted_list[unique] == sorted_list[unique + N - 1]:
+                return sorted_list[unique]
             else:
                 unique += N
 
